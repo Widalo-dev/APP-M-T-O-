@@ -1,0 +1,18 @@
+<body>
+  <form id="form">
+    <input id="nom" placeholder="Entrez le nom du produit">
+    <button type="submit">Ajauter</button>
+  </form>
+    <div id="cat"></div>
+    <script>
+      let form = document.getElementById("form");
+      let inputNom = document.getElementById("nom");
+     let catalogue = document.getElementById("cat");
+      form.addEventListener("submit",(e)=>{
+        e.preventDefault();
+        let nom = inputNom.value;
+        catalogue.innerHTML += "<p>" + nom + "</p>";
+        inputNom.value = "";
+      }).join("");
+    </script>
+</body>
